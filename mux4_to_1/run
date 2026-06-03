@@ -1,0 +1,65 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x61b4979f44c0 .scope module, "mux4_to_1_dataflow" "mux4_to_1_dataflow" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "i0";
+    .port_info 1 /INPUT 1 "i1";
+    .port_info 2 /INPUT 1 "i2";
+    .port_info 3 /INPUT 1 "i3";
+    .port_info 4 /INPUT 1 "s1";
+    .port_info 5 /INPUT 1 "s0";
+    .port_info 6 /OUTPUT 1 "out";
+o0x7cb7812863d8 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x61b497a408c0 .functor NOT 1, o0x7cb7812863d8, C4<0>, C4<0>, C4<0>;
+o0x7cb7812863a8 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x61b497a40980 .functor NOT 1, o0x7cb7812863a8, C4<0>, C4<0>, C4<0>;
+L_0x61b497a40a50 .functor AND 1, L_0x61b497a408c0, L_0x61b497a40980, C4<1>, C4<1>;
+o0x7cb7812862b8 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x61b497a40b40 .functor AND 1, L_0x61b497a40a50, o0x7cb7812862b8, C4<1>, C4<1>;
+L_0x61b497a40c30 .functor NOT 1, o0x7cb7812863d8, C4<0>, C4<0>, C4<0>;
+L_0x61b497a40cf0 .functor AND 1, L_0x61b497a40c30, o0x7cb7812863a8, C4<1>, C4<1>;
+o0x7cb7812862e8 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x61b497a40e40 .functor AND 1, L_0x61b497a40cf0, o0x7cb7812862e8, C4<1>, C4<1>;
+L_0x61b497a40f00 .functor OR 1, L_0x61b497a40b40, L_0x61b497a40e40, C4<0>, C4<0>;
+L_0x61b497a41060 .functor NOT 1, o0x7cb7812863a8, C4<0>, C4<0>, C4<0>;
+L_0x61b497a410d0 .functor AND 1, o0x7cb7812863d8, L_0x61b497a41060, C4<1>, C4<1>;
+o0x7cb781286318 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x61b497a411f0 .functor AND 1, L_0x61b497a410d0, o0x7cb781286318, C4<1>, C4<1>;
+L_0x61b497a41260 .functor OR 1, L_0x61b497a40f00, L_0x61b497a411f0, C4<0>, C4<0>;
+L_0x61b497a413e0 .functor AND 1, o0x7cb7812863d8, o0x7cb7812863a8, C4<1>, C4<1>;
+o0x7cb781286348 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x61b497a41450 .functor AND 1, L_0x61b497a413e0, o0x7cb781286348, C4<1>, C4<1>;
+L_0x61b497a41370 .functor OR 1, L_0x61b497a41260, L_0x61b497a41450, C4<0>, C4<0>;
+v0x61b4979f4700_0 .net *"_ivl_0", 0 0, L_0x61b497a408c0;  1 drivers
+v0x61b497a3f600_0 .net *"_ivl_10", 0 0, L_0x61b497a40cf0;  1 drivers
+v0x61b497a3f6e0_0 .net *"_ivl_12", 0 0, L_0x61b497a40e40;  1 drivers
+v0x61b497a3f7a0_0 .net *"_ivl_14", 0 0, L_0x61b497a40f00;  1 drivers
+v0x61b497a3f880_0 .net *"_ivl_16", 0 0, L_0x61b497a41060;  1 drivers
+v0x61b497a3f9b0_0 .net *"_ivl_18", 0 0, L_0x61b497a410d0;  1 drivers
+v0x61b497a3fa90_0 .net *"_ivl_2", 0 0, L_0x61b497a40980;  1 drivers
+v0x61b497a3fb70_0 .net *"_ivl_20", 0 0, L_0x61b497a411f0;  1 drivers
+v0x61b497a3fc50_0 .net *"_ivl_22", 0 0, L_0x61b497a41260;  1 drivers
+v0x61b497a3fd30_0 .net *"_ivl_24", 0 0, L_0x61b497a413e0;  1 drivers
+v0x61b497a3fe10_0 .net *"_ivl_26", 0 0, L_0x61b497a41450;  1 drivers
+v0x61b497a3fef0_0 .net *"_ivl_4", 0 0, L_0x61b497a40a50;  1 drivers
+v0x61b497a3ffd0_0 .net *"_ivl_6", 0 0, L_0x61b497a40b40;  1 drivers
+v0x61b497a400b0_0 .net *"_ivl_8", 0 0, L_0x61b497a40c30;  1 drivers
+v0x61b497a40190_0 .net "i0", 0 0, o0x7cb7812862b8;  0 drivers
+v0x61b497a40250_0 .net "i1", 0 0, o0x7cb7812862e8;  0 drivers
+v0x61b497a40310_0 .net "i2", 0 0, o0x7cb781286318;  0 drivers
+v0x61b497a404e0_0 .net "i3", 0 0, o0x7cb781286348;  0 drivers
+v0x61b497a405a0_0 .net "out", 0 0, L_0x61b497a41370;  1 drivers
+v0x61b497a40660_0 .net "s0", 0 0, o0x7cb7812863a8;  0 drivers
+v0x61b497a40720_0 .net "s1", 0 0, o0x7cb7812863d8;  0 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "mux4_to_1_dataflow.v";
