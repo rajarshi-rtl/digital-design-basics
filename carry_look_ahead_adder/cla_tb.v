@@ -8,11 +8,13 @@ cla dut(.a(a),.b(b),.cin(cin),.sum(sum),.cout(cout));
 initial begin
 	$dumpfile("cla_wav.vcd");
 	$dumpvars(0,cla_tb);
-	$monitor("Time = %0t, A=%d B=%d Cin=%d, Sum=%d Cout=%d",$time,a,b,cin,sum,cout);
-	a=4'b0000; b=4'b0000; cin=1'b0;
-	#10 a=4'b0010; b=4'b0101;
-	#10 a=4'b1000; b=4'b0011; cin=1'b1;
-	#10 a=4'b1111; b=4'b0010; cin=1'b1;
+	$monitor("Time = %0t, A=%b B=%b Cin=%b, Sum=%b Cout=%b",$time,a,b,cin,sum,cout);
+	a=4'd0; b=4'd0; cin=1'b0;
+	#10 a=4'd2; b=4'd6;
+	#10 a=4'd7; b=4'd5; cin=1'b1;
+	#10 a=4'd7; b=4'd9; cin=1'b1;
+	#10 a=4'd1; b=4'd9; cin=1'b0;
+	#10 a=4'd7; b=4'd0; cin=1'b0;
 	#10 $finish;
 end
 endmodule
