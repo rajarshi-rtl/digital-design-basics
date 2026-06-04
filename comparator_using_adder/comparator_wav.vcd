@@ -1,0 +1,86 @@
+$date
+	Thu Jun  4 12:25:01 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module comparator_tb $end
+$var wire 1 ! lesser $end
+$var wire 1 " greater $end
+$var wire 1 # equal $end
+$var reg 4 $ a [3:0] $end
+$var reg 4 % b [3:0] $end
+$scope module dut $end
+$var wire 4 & a [3:0] $end
+$var wire 4 ' b [3:0] $end
+$var wire 1 ! lesser $end
+$var wire 4 ( temp_sum [3:0] $end
+$var wire 1 " greater $end
+$var wire 1 # equal $end
+$scope module adder1 $end
+$var wire 4 ) a [3:0] $end
+$var wire 4 * b [3:0] $end
+$var wire 1 + cin $end
+$var wire 4 , sum [3:0] $end
+$var wire 1 " cout $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1110 ,
+0+
+b1110 *
+b0 )
+b1110 (
+b1 '
+b0 &
+b1 %
+b0 $
+0#
+0"
+1!
+$end
+#10
+0!
+b1010 (
+b1010 ,
+1"
+b1100 $
+b1100 &
+b1100 )
+#20
+1#
+b1111 (
+b1111 ,
+0"
+b11 *
+b1100 %
+b1100 '
+#30
+1!
+b110 *
+0#
+b1100 (
+b1100 ,
+b1001 %
+b1001 '
+b110 $
+b110 &
+b110 )
+#40
+0!
+b101 (
+b101 ,
+1"
+b1111 $
+b1111 &
+b1111 )
+#50
