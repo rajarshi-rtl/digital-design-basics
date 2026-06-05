@@ -6,6 +6,7 @@
 - 4x1 MUX (Using case statement, conditional statement as well as dataflow modelling)
 - 4-bit Magnitude Comparator using Adder
 - 4-bit Asynchronous Up Counter (Using negative edge D Flip Flops in toggle mode)
+- D Latch with Active High Asynchronous Reset
 
 ## Tools Used
 - Verilog HDL
