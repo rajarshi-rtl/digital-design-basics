@@ -1,0 +1,59 @@
+$date
+	Sat Jun  6 13:17:50 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module shift_right_tb $end
+$var wire 4 ! q [3:0] $end
+$var reg 1 " clk $end
+$var reg 1 # rst $end
+$scope module dut $end
+$var wire 1 " clk $end
+$var wire 1 # rst $end
+$var reg 4 $ q [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1010 $
+x#
+0"
+b1010 !
+$end
+#5
+b101 !
+b101 $
+1"
+#10
+0"
+#15
+b10 !
+b10 $
+1"
+#20
+0"
+#25
+b1 !
+b1 $
+1"
+#30
+0"
+#35
+b0 !
+b0 $
+1"
+#40
+0"
+1#
+#45
+1"
+#50
+0"
