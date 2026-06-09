@@ -1,5 +1,5 @@
 $date
-	Tue Jun  9 10:54:43 2026
+	Tue Jun  9 10:54:03 2026
 $end
 $version
 	Icarus Verilog
@@ -7,7 +7,7 @@ $end
 $timescale
 	1s
 $end
-$scope module mealy_110_nov_tb $end
+$scope module moore_110_nov_tb $end
 $var wire 1 ! out $end
 $var reg 1 " clk $end
 $var reg 1 # din $end
@@ -19,60 +19,76 @@ $var wire 1 $ rst $end
 $var parameter 2 % s0 $end
 $var parameter 2 & s1 $end
 $var parameter 2 ' s2 $end
-$var reg 1 ! detect $end
-$var reg 2 ( ps [1:0] $end
+$var parameter 2 ( s3 $end
+$var reg 1 ! out $end
+$var reg 2 ) present_state [1:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 $comment Show the parameter values. $end
 $dumpall
+b11 (
 b10 '
 b1 &
 b0 %
 $end
 #0
 $dumpvars
-b0 (
+b0 )
 1$
 0#
-0"
+1"
 0!
 $end
 #5
-1"
-#10
-0"
-1#
 0$
+0"
+#10
+b1 )
+1#
+1"
 #15
-b1 (
-1"
+0"
 #20
-0"
+b10 )
+1"
 #25
-b10 (
-1"
+0"
 #30
-0"
+1"
 #35
-b1 (
-1"
+0"
 #40
-0"
-#45
-b10 (
+b11 )
 1"
-#50
-0"
 0#
-#55
-1!
-b0 (
-1"
-#60
+#45
 0"
-#65
+#50
+b1 )
+1!
+1"
+1#
+#55
+0"
+#60
+b10 )
 0!
 1"
-#70
+#65
 0"
+#70
+b11 )
+1"
+0#
+#75
+0"
+#80
+b0 )
+1!
+1"
+#85
+0"
+#90
+0!
+1"
