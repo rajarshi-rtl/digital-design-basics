@@ -1,0 +1,102 @@
+$date
+	Wed Jun 24 10:57:15 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module universal_shift_register_tb $end
+$var wire 1 ! serial_out_right $end
+$var wire 1 " serial_out_left $end
+$var wire 4 # parallel_out [0:3] $end
+$var reg 1 $ clk $end
+$var reg 2 % mode [1:0] $end
+$var reg 4 & parallel_in [0:3] $end
+$var reg 1 ' rst $end
+$var reg 1 ( serial_in_left $end
+$var reg 1 ) serial_in_right $end
+$scope module dut $end
+$var wire 1 $ clk $end
+$var wire 2 * mode [1:0] $end
+$var wire 4 + parallel_in [0:3] $end
+$var wire 1 ' rst $end
+$var wire 1 ( serial_in_left $end
+$var wire 1 ) serial_in_right $end
+$var reg 4 , q [0:3] $end
+$var reg 1 " serial_out_left $end
+$var reg 1 ! serial_out_right $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 ,
+bx +
+bx *
+0)
+0(
+0'
+bx &
+bx %
+0$
+b0 #
+0"
+0!
+$end
+#5000
+1"
+1!
+b1101 #
+b1101 ,
+b1101 &
+b1101 +
+b11 %
+b11 *
+1'
+1$
+#10000
+0$
+#15000
+1$
+#20000
+0$
+b1 %
+b1 *
+#25000
+0"
+0!
+b110 #
+b110 ,
+1$
+#30000
+0$
+b10 %
+b10 *
+#35000
+1"
+b1100 #
+b1100 ,
+1$
+#40000
+0$
+b11 &
+b11 +
+b11 %
+b11 *
+#45000
+0"
+1!
+b11 #
+b11 ,
+1$
+#50000
+0$
+#55000
+1$
+#60000
+0$
